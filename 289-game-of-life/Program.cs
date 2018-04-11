@@ -8,7 +8,7 @@ namespace _289_game_of_life
         //Following algorithm solves the game of life problem in place instead of using a buffer board, therefore space complexity is O(1) if we do
         //not count the input board.
         //time complexity follows: for every index in the board, we search a 3x3 (or less at the array limits) grid. This means that every index gets searched atmost 9 times
-        //resulting in 9n queries. Therefore, time complexity is O(n).
+        //resulting in 9n queries. Therefore, time complexity is O(n) where n is total size of the 2d array. In terms of dimensions, time is O(n^2) or O(nm) if the dimensions differ.
         public void GameOfLife(int[,] board) {
             if(board.Length == 0) return;
             int rows = board.GetLength(0), cols = board.GetLength(1);
